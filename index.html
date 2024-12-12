@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Resume Builder with shareableLink and download</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="formContainer">
+      <div class="innerContainer" id="innerContainer">
+        <form id="resumeForm">
+          <fieldset>
+            <legend>Personal Information</legend>
+            <div class="informationForm">
+              <div class="informationFormBox1">
+                <div class="profilePicForm">
+                  <img src="/demo-profile-pic.png" id="pic" />
+                </div>
+                <div class="btn" id="pp">
+                  <a>
+                    <span>
+                      <label for="profilePicture" class="labelButton"
+                        >Upload Picture</label
+                      >
+                    </span>
+                  </a>
+                <input
+                  type="file"
+                  id="profilePicture"
+                  accept="image/*"
+                  style="display: none"
+                />
+              </div>
+              </div>
+              <div class="informationFormBox2">
+                <div class="ibd">
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" required />
+                </div>
+                <div class="ibd">
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" required />
+                </div>
+                <div class="ibd">
+                  <label for="phone">Mobile Number:</label>
+                  <input type="number" id="phone" />
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          
+      <div class="formData">
+          <fieldset>
+            <legend>Eduction</legend>
+            <div class="eduction">
+              <div class="ibd">
+                <label for="degree">Certificate / Degree:</label>
+              <input type="text" id="degree" />
+              </div>
+              <div class="ibd">
+                <label for="school">School / University:</label>
+                <input type="text" id="school" />
+              </div>
+            </div>
+          </fieldset>
+        
+          <fieldset>
+            <legend>Work Experience</legend>
+            <div class="experience">
+              <div class="ibd">
+                <label for="jobTitle">Job Title:</label>
+                <input type="text" id="jobTitle" />
+              </div>
+              <div class="ibd">
+                <label for="company">Company:</label>
+                <input type="text" id="company" />
+              </div>
+            </div>
+          </fieldset>
+        
+          <fieldset>
+            <legend>Skills</legend>
+            <div class="ibd skills">
+              <label for="skills">Skills</label>
+              <input
+                type="text"
+                id="skills"
+                placeholder="Separate skills with commas"
+              />
+            </div>
+          </fieldset>
+        </div>
+        <div class="subButton" >
+          <button type="submit">Generate Resume</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="frd">
+    <div id="resume"></div>
+
+    <div class="downloadAndShareable">
+      <div id="shareable-link" class="link"></div>
+      <div class="btn-neon-10 btnCopy" id="copy-link-btn" style="display: none">
+        <a>
+          <span>
+            <button>Copy Link</button>
+          </span>
+        </a>
+      </div>
+      <div class="btn-neon-10 btnDownload" id="download-btn" style="display: none">
+        <a>
+          <span>
+            <button>Download as PDF</button>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/d31c2254b0.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
